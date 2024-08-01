@@ -71,6 +71,7 @@
 
       let padragraph = document.createElement("p");
       padragraph.id = "para";
+      padragraph.style.fontWeight = "10px";
       document.querySelector("body").appendChild(padragraph);
 
       function openfunc() {
@@ -81,7 +82,7 @@
         document.querySelector("body").appendChild(paraGraph);
         let anotherImage = document.createElement("img");
         anotherImage.src = "rose.svg";
-        document.querySelector("body").appendChild(anotherImage);
+        document.querySelector("para").appendChild(anotherImage);
       }
 
       function clearText() {
