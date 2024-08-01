@@ -66,28 +66,34 @@
       clearButton.style.color = "#fff";
       clearButton.style.cursor = "pointer";
       clearButton.style.borderColor = "#00fff0";
-      clearButton.addEventListener("click", clearText);
+      clearButton.addEventListener("click", clearfunc);
       document.querySelector("div").appendChild(clearButton);
 
-      let padragraph = document.createElement("p");
-      padragraph.id = "para";
-      padragraph.style.fontWeight = "10px";
-      document.querySelector("body").appendChild(padragraph);
+      let paradiv = document.createElement("p");
+      paradiv.id = "para";
+      paradiv.style.fontWeight = "bold";
+      paradiv.style.fontSize = "15px";
+      paradiv.style.color = "green";
+      document.querySelector("body").appendChild(paradiv);
+
+      let anotherImage = document.createElement("img");
+      anotherImage.src = "rose.svg";
+      document.getElementById("para").appendChild(anotherImage);
 
       function openfunc() {
         let paraGraph = document.getElementById("para");
         paraGraph.textContent =
-          "You Can Call Me anytime am always ON and active for you";
+          "You Can Call Me anytime am always ON and active for you (+2348150672809)";
         paraGraph.id = "para";
         document.querySelector("body").appendChild(paraGraph);
-        let anotherImage = document.createElement("img");
-        anotherImage.src = "rose.svg";
-        document.querySelector("para").appendChild(anotherImage);
       }
 
-      function clearText() {
+      function clearfunc() {
         const inputField = document.getElementById("para");
         inputField.textContent = "";
+        let anotherImage = document.createElement("img");
+        anotherImage.src = "rose.svg";
+        document.getElementById("para").appendChild(anotherImage);
       }
     </script>
   </body>
