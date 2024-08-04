@@ -68,13 +68,12 @@ rose.style.background = "#000";
 rose.style.color = "#fff";
 rose.style.cursor = "pointer";
 rose.style.borderColor = "#00fff0";
-rose.addEventListener("click", bBr);
+rose.addEventListener("click", Roses);
 document.querySelector("div").appendChild(rose);
 
 let paradiv = document.createElement("a");
 paradiv.href = "https://wa.me/+2348150672809";
 paradiv.id = "para";
-paradiv.style.padding = "50px 5px 50px 5px";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
@@ -84,7 +83,6 @@ function openfunc() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
     "You Can Call Me anytime am always ON and active for you (+2348150672809)";
-  paraGraph.id = "para";
   document.querySelector("body").appendChild(paraGraph);
 }
 
@@ -92,7 +90,7 @@ function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
 }
-function bBr() {
+function Roses() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
   let anotherImage = document.createElement("img");
