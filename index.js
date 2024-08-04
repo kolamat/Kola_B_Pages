@@ -68,7 +68,7 @@ rose.style.background = "#000";
 rose.style.color = "#fff";
 rose.style.cursor = "pointer";
 rose.style.borderColor = "#00fff0";
-rose.addEventListener("click", bBR);
+rose.addEventListener("click", bBr);
 document.querySelector("div").appendChild(rose);
 
 let paradiv = document.createElement("p");
@@ -90,7 +90,7 @@ function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
 }
-function bBR() {
+function bBr() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
   let anotherImage = document.createElement("img");
