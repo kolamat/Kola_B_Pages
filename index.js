@@ -38,6 +38,7 @@ button.style.fontWeight = "normal";
 button.style.padding = "5px 10px";
 button.style.textAlign = "center";
 button.style.background = "#000";
+button.style.borderRadius = "10px";
 button.style.color = "#fff";
 button.style.cursor = "pointer";
 button.style.borderColor = "#00fff0";
@@ -52,9 +53,23 @@ clearButton.style.textAlign = "center";
 clearButton.style.background = "#000";
 clearButton.style.color = "#fff";
 clearButton.style.cursor = "pointer";
+clearButton.style.borderRadius = "10px";
 clearButton.style.borderColor = "#00fff0";
 clearButton.addEventListener("click", clearfunc);
 document.querySelector("div").appendChild(clearButton);
+
+let rose = document.createElement("button");
+rose.textContent = "View ROSE";
+rose.style.fontWeight = "normal";
+rose.style.padding = "5px 10px";
+rose.style.textAlign = "center";
+rose.style.borderRadius = "10px";
+rose.style.background = "#000";
+rose.style.color = "#fff";
+rose.style.cursor = "pointer";
+rose.style.borderColor = "#00fff0";
+rose.addEventListener("click", bBR);
+document.querySelector("div").appendChild(rose);
 
 let paradiv = document.createElement("p");
 paradiv.id = "para";
@@ -63,9 +78,9 @@ paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
 document.querySelector("body").appendChild(paradiv);
 
-let anotherImage = document.createElement("img");
-anotherImage.src = "rose.svg";
-document.getElementById("para").appendChild(anotherImage);
+// let anotherImage = document.createElement("img");
+// anotherImage.src = "rose.svg";
+// document.getElementById("para").appendChild(anotherImage);
 
 function openfunc() {
   let paraGraph = document.getElementById("para");
@@ -78,4 +93,11 @@ function openfunc() {
 function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
+}
+function bBR() {
+  const inputField = document.getElementById("para");
+  inputField.textContent = "";
+  let anotherImage = document.createElement("img");
+  anotherImage.src = "rose.svg";
+  document.getElementById("para").appendChild(anotherImage);
 }
