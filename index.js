@@ -71,8 +71,10 @@ rose.style.borderColor = "#00fff0";
 rose.addEventListener("click", bBr);
 document.querySelector("div").appendChild(rose);
 
-let paradiv = document.createElement("p");
+let paradiv = document.createElement("a");
+paradiv.href = "https://wa.me/+2348150672809";
 paradiv.id = "para";
+paradiv.style.padding = "50px 5px 50px 5px";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
