@@ -90,6 +90,7 @@ function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
 }
+
 function Roses() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
