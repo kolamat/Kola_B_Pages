@@ -78,10 +78,6 @@ paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
 document.querySelector("body").appendChild(paradiv);
 
-// let anotherImage = document.createElement("img");
-// anotherImage.src = "rose.svg";
-// document.getElementById("para").appendChild(anotherImage);
-
 function openfunc() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
