@@ -78,7 +78,4 @@ function openfunc() {
 function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
-  //   let anotherImage = document.createElement("img");
-  //   anotherImage.src = "rose.svg";
-  //   document.getElementById("para").appendChild(anotherImage);
 }
