@@ -3,7 +3,7 @@ body.style.textAlign = "center";
 body.style.background = "#e38b8b";
 
 let heading = document.createElement("H1");
-heading.textContent = "My name is Temi";
+heading.textContent = "My name is Moridiya";
 heading.style.textDecoration = "underline";
 document.querySelector("body").appendChild(heading);
 
@@ -13,7 +13,8 @@ img1.style.borderRadius = "15px 5px";
 document.querySelector("body").appendChild(img1);
 
 let pTag = document.createElement("p");
-pTag.textContent = "I dont like the 'LOVE' phrase";
+pTag.textContent =
+  "As much as I really wanna date JOHNSON at the same I really don’t want to";
 pTag.style.fontWeight = "bold";
 document.querySelector("body").appendChild(pTag);
 
@@ -23,7 +24,7 @@ img2.style.borderRadius = "15px 5px";
 document.querySelector("body").appendChild(img2);
 
 let h2 = document.createElement("H2");
-h2.textContent = "But I might fall for the 'LOVE' of red 'Roses'";
+h2.textContent = "But am starting to fall for him";
 document.querySelector("body").appendChild(h2);
 
 let buttonContainer = document.createElement("div");
