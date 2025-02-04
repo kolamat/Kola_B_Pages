@@ -72,6 +72,20 @@ rose.style.borderColor = "#00fff0";
 rose.addEventListener("click", Roses);
 document.querySelector("div").appendChild(rose);
 
+const Butt = document.createElement("button");
+Butt.textContent = "Call me";
+Butt.style.fontWeight = "normal";
+Butt.style.display = "flex";
+Butt.style.padding = "5px 10px";
+Butt.style.textAlign = "center";
+Butt.style.fontWeight = "bold";
+Butt.style.borderRadius = "20px";
+Butt.style.margin = "20px 0px";
+Butt.style.justifySelf = "center";
+Butt.style.cursor = "pointer";
+document.addEventListener("click", message);
+// document.querySelector("body").appendChild(button);
+
 let paradiv = document.createElement("a");
 paradiv.href = "https://wa.me/+2348150672809";
 paradiv.id = "para";
@@ -98,4 +112,26 @@ function Roses() {
   let anotherImage = document.createElement("img");
   anotherImage.src = "rose.svg";
   document.getElementById("para").appendChild(anotherImage);
+}
+
+function message() {
+  const paraGraph = document.createElement("p");
+  paraGraph.textContent = "Like";
+  document.querySelector("body").appendChild(paraGraph);
+}
+
+function callMyName() {
+  const button = document.createElement("button");
+  //   onclick = message;
+  //   button.textContent = "Call me";
+  //   button.style.fontWeight = "normal";
+  //   button.style.display = "flex";
+  //   button.style.padding = "5px 10px";
+  //   button.style.textAlign = "center";
+  //   button.style.fontWeight = "bold";
+  //   button.style.borderRadius = "20px";
+  //   button.style.margin = "20px 0px";
+  //   button.style.justifySelf = "center";
+  //   button.style.cursor = "pointer";
+  document.querySelector("body").appendChild(button);
 }
