@@ -1,5 +1,9 @@
+const images = ["/RedRoses.jpg", "/goldrose.jpg", "/telephone.jpg"];
+
 let body = document.querySelector("body");
 body.style.textAlign = "center";
+body.style.scrollBehavior = "none";
+body.style.height = "100vh";
 body.style.background = "#e38b8b";
 
 let heading = document.createElement("H1");
@@ -30,34 +34,29 @@ document.querySelector("body").appendChild(h2);
 let buttonContainer = document.createElement("div");
 buttonContainer.id = "inputField";
 buttonContainer.style.display = "flex";
-buttonContainer.style.justifyContent = "Space-Between";
+buttonContainer.style.flexWrap = "wrap";
+buttonContainer.style.gap = "20px";
+buttonContainer.style.justifyContent = "center";
 document.querySelector("body").appendChild(buttonContainer);
 
-let button = document.createElement("button");
-button.textContent = "Click-Me";
-button.style.fontWeight = "normal";
-button.style.padding = "5px 10px";
+let clearButton = document.createElement("img");
+clearButton.src = "./reset.jpg";
+clearButton.style.width = "100px";
+clearButton.style.cursor = "pointer";
+clearButton.style.borderRadius = "10px";
+// clearButton.style.borderColor = "#00fff0";
+clearButton.addEventListener("click", clearfunc);
+document.querySelector("div").appendChild(clearButton);
+
+let button = document.createElement("img");
+button.src = images[1];
 button.style.textAlign = "center";
-button.style.background = "#000";
 button.style.borderRadius = "10px";
-button.style.color = "#fff";
 button.style.cursor = "pointer";
+button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", openfunc);
 document.querySelector("div").appendChild(button);
-
-let clearButton = document.createElement("button");
-clearButton.textContent = "Click-Me To Reset";
-clearButton.style.fontWeight = "normal";
-clearButton.style.padding = "5px 10px";
-clearButton.style.textAlign = "center";
-clearButton.style.background = "#000";
-clearButton.style.color = "#fff";
-clearButton.style.cursor = "pointer";
-clearButton.style.borderRadius = "10px";
-clearButton.style.borderColor = "#00fff0";
-clearButton.addEventListener("click", clearfunc);
-document.querySelector("div").appendChild(clearButton);
 
 let rose = document.createElement("button");
 rose.textContent = "View ROSE";
@@ -72,38 +71,35 @@ rose.style.borderColor = "#00fff0";
 rose.addEventListener("click", Roses);
 document.querySelector("div").appendChild(rose);
 
-const Butt = document.createElement("button");
-Butt.textContent = "Call me";
-Butt.style.fontWeight = "normal";
-Butt.style.display = "flex";
-Butt.style.padding = "5px 10px";
-Butt.style.textAlign = "center";
-Butt.style.fontWeight = "bold";
-Butt.style.borderRadius = "20px";
-Butt.style.margin = "20px 0px";
-Butt.style.justifySelf = "center";
-Butt.style.cursor = "pointer";
-document.addEventListener("click", message);
-// document.querySelector("body").appendChild(button);
-
 let paradiv = document.createElement("a");
 paradiv.href = "https://wa.me/+2348150672809";
 paradiv.id = "para";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
+paradiv.style.height = "100px";
 document.querySelector("body").appendChild(paradiv);
 
+let buttDiv = document.createElement("p");
+buttDiv.href = "https://wa.me/+2348150672809";
+buttDiv.id = "buttDiv";
+buttDiv.style.fontWeight = "bold";
+buttDiv.style.fontSize = "15px";
+document.querySelector("body").appendChild(buttDiv);
+
+// let buttonParagraph = document.createElement("p");
+// buttonParagraph.id = "buttonParagraph";
+// document.querySelector("body").appendChild(buttonParagraph);
+
+function clearfunc() {
+  const inputField = document.getElementById("para");
+  inputField.textContent = "";
+}
 function openfunc() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
     "You Can Call Me anytime am always ON and active for you (+2348150672809)";
   document.querySelector("body").appendChild(paraGraph);
-}
-
-function clearfunc() {
-  const inputField = document.getElementById("para");
-  inputField.textContent = "";
 }
 
 function Roses() {
@@ -114,24 +110,30 @@ function Roses() {
   document.getElementById("para").appendChild(anotherImage);
 }
 
+function callMyName() {
+  const button = document.createElement("button");
+  button.textContent = "View button";
+  button.style.fontWeight = "normal";
+  button.style.padding = "5px 10px";
+  button.style.textAlign = "center";
+  button.style.borderRadius = "10px";
+  button.style.background = "#000";
+  button.style.color = "#fff";
+  button.style.cursor = "pointer";
+  button.style.borderColor = "#00fff0";
+  button.addEventListener("click", message);
+  document.querySelector("div").appendChild(button);
+}
+
+callMyName();
+
 function message() {
-  const paraGraph = document.createElement("p");
+  const paraGraph = document.getElementById("para");
   paraGraph.textContent = "Like";
+  paraGraph.style.textDecoration = "none";
   document.querySelector("body").appendChild(paraGraph);
 }
 
-function callMyName() {
-  const button = document.createElement("button");
-  //   onclick = message;
-  //   button.textContent = "Call me";
-  //   button.style.fontWeight = "normal";
-  //   button.style.display = "flex";
-  //   button.style.padding = "5px 10px";
-  //   button.style.textAlign = "center";
-  //   button.style.fontWeight = "bold";
-  //   button.style.borderRadius = "20px";
-  //   button.style.margin = "20px 0px";
-  //   button.style.justifySelf = "center";
-  //   button.style.cursor = "pointer";
-  document.querySelector("body").appendChild(button);
+function tryReturn() {
+  return "I am a return statement";
 }
