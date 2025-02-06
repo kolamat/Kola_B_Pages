@@ -1,31 +1,55 @@
-const images = ["/RedRoses.jpg", "/goldrose.jpg", "/telephone.jpg"];
+const images = [
+  "RedRoses.jpg",
+  "goldrose.jpg",
+  "telephone.jpg",
+  "quotes.png",
+  "quotes1.png",
+  "quotes2.png",
+  "red1.jpg",
+  "red.jpg",
+];
 
 let body = document.querySelector("body");
 body.style.textAlign = "center";
 body.style.scrollBehavior = "none";
 body.style.height = "100vh";
 body.style.background = "#e38b8b";
+body.style.overflowX = "hidden";
 
 let heading = document.createElement("H1");
-heading.textContent = "My name is Moridiya";
+heading.textContent = "My name is KOLADE";
 heading.style.textDecoration = "underline";
 document.querySelector("body").appendChild(heading);
 
+const mainContainer = document.createElement("div");
+mainContainer.id = "div";
+mainContainer.style.width = "100%";
+mainContainer.style.display = "grid";
+mainContainer.style.justifyItems = "center";
+// mainContainer.style.gridTemplateColumns = "repeat(auto-fill, 380px)";
+mainContainer.style.placeItems = "center";
+// mainContainer.style.gridTemplateColumns = "380px 380px 380px";
+document.querySelector("body").appendChild(mainContainer);
+
 let img1 = document.createElement("img");
-img1.src = "rose1.jpeg";
-img1.style.borderRadius = "15px 5px";
-document.querySelector("body").appendChild(img1);
+img1.src = images[6];
+img1.style.borderRadius = "10px 5px";
+img1.style.width = "400px";
+img1.style.height = "250px";
+document.getElementById("div").appendChild(img1);
 
 let pTag = document.createElement("p");
 pTag.textContent =
   "As much as I really wanna date JOHNSON at the same I really don’t want to";
 pTag.style.fontWeight = "bold";
-document.querySelector("body").appendChild(pTag);
+document.getElementById("div").appendChild(pTag);
 
 let img2 = document.createElement("img");
-img2.src = "rose2.jpeg";
-img2.style.borderRadius = "15px 5px";
-document.querySelector("body").appendChild(img2);
+img2.src = images[7];
+img2.style.borderRadius = "10px 5px";
+img2.style.width = "400px";
+img2.style.height = "250px";
+document.getElementById("div").appendChild(img2);
 
 let h2 = document.createElement("H2");
 h2.textContent = "But am starting to fall for him";
@@ -46,30 +70,25 @@ clearButton.style.cursor = "pointer";
 clearButton.style.borderRadius = "10px";
 // clearButton.style.borderColor = "#00fff0";
 clearButton.addEventListener("click", clearfunc);
-document.querySelector("div").appendChild(clearButton);
+document.getElementById("inputField").appendChild(clearButton);
 
 let button = document.createElement("img");
-button.src = images[1];
+button.src = images[2];
 button.style.textAlign = "center";
 button.style.borderRadius = "10px";
 button.style.cursor = "pointer";
 button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", openfunc);
-document.querySelector("div").appendChild(button);
+document.getElementById("inputField").appendChild(button);
 
-let rose = document.createElement("button");
-rose.textContent = "View ROSE";
-rose.style.fontWeight = "normal";
-rose.style.padding = "5px 10px";
-rose.style.textAlign = "center";
+let rose = document.createElement("img");
+rose.src = images[1];
 rose.style.borderRadius = "10px";
-rose.style.background = "#000";
-rose.style.color = "#fff";
+rose.style.width = "100px";
 rose.style.cursor = "pointer";
-rose.style.borderColor = "#00fff0";
 rose.addEventListener("click", Roses);
-document.querySelector("div").appendChild(rose);
+document.getElementById("inputField").appendChild(rose);
 
 let paradiv = document.createElement("a");
 paradiv.href = "https://wa.me/+2348150672809";
@@ -77,7 +96,7 @@ paradiv.id = "para";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
-paradiv.style.height = "100px";
+paradiv.style.width = "500px";
 document.querySelector("body").appendChild(paradiv);
 
 let buttDiv = document.createElement("p");
@@ -87,10 +106,6 @@ buttDiv.style.fontWeight = "bold";
 buttDiv.style.fontSize = "15px";
 document.querySelector("body").appendChild(buttDiv);
 
-// let buttonParagraph = document.createElement("p");
-// buttonParagraph.id = "buttonParagraph";
-// document.querySelector("body").appendChild(buttonParagraph);
-
 function clearfunc() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
@@ -99,20 +114,25 @@ function openfunc() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
     "You Can Call Me anytime am always ON and active for you (+2348150672809)";
+  //   paraGraph.style.marginBottom = "20px";
   document.querySelector("body").appendChild(paraGraph);
 }
 
 function Roses() {
+  // This const code makes only the image to display once and not multiple times
   const inputField = document.getElementById("para");
   inputField.textContent = "";
-  let anotherImage = document.createElement("img");
-  anotherImage.src = "rose.svg";
-  document.getElementById("para").appendChild(anotherImage);
+  let redRose = document.createElement("img");
+  redRose.src = images[0];
+  redRose.style.width = "300px";
+  redRose.style.borderRadius = "10px 20px";
+  redRose.style.marginTop = "60px";
+  document.getElementById("para").appendChild(redRose);
 }
 
-function callMyName() {
+function Quotes() {
   const button = document.createElement("button");
-  button.textContent = "View button";
+  button.textContent = "Love Quotes";
   button.style.fontWeight = "normal";
   button.style.padding = "5px 10px";
   button.style.textAlign = "center";
@@ -122,16 +142,31 @@ function callMyName() {
   button.style.cursor = "pointer";
   button.style.borderColor = "#00fff0";
   button.addEventListener("click", message);
-  document.querySelector("div").appendChild(button);
+  document.getElementById("inputField").appendChild(button);
 }
 
-callMyName();
+Quotes();
 
 function message() {
-  const paraGraph = document.getElementById("para");
-  paraGraph.textContent = "Like";
-  paraGraph.style.textDecoration = "none";
-  document.querySelector("body").appendChild(paraGraph);
+  const inputField = document.getElementById("para");
+  inputField.textContent = "";
+  const quote0 = document.createElement("img");
+  quote0.src = images[3];
+  quote0.style.width = "300px";
+  quote0.style.marginTop = "5px";
+  quote0.style.borderRadius = "10px";
+  document.getElementById("para").appendChild(quote0);
+  const quote1 = document.createElement("img");
+  quote1.src = images[4];
+  quote1.style.width = "300px";
+  quote1.style.borderRadius = "10px";
+  quote1.style.margin = "10px 5px";
+  document.getElementById("para").appendChild(quote1);
+  const quote2 = document.createElement("img");
+  quote2.src = images[5];
+  quote2.style.width = "300px";
+  quote2.style.borderRadius = "10px";
+  document.getElementById("para").appendChild(quote2);
 }
 
 function tryReturn() {
