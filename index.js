@@ -16,10 +16,13 @@ body.style.height = "100vh";
 body.style.background = "#c46666";
 body.style.overflowX = "hidden";
 body.style.color = "white";
+body.style.fontFamily = "'Crimson Text', serif";
 
 let heading = document.createElement("H1");
-heading.textContent = "My name is Moridiya";
-heading.style.textDecoration = "underline";
+heading.textContent = "My name is MIKHAIL MORDIYYAH";
+heading.style.textDecoration = "line-through";
+heading.style.fontSize = "20px";
+heading.style.color = "#490e0e";
 document.querySelector("body").appendChild(heading);
 
 const mainContainer = document.createElement("div");
@@ -70,7 +73,7 @@ clearButton.style.width = "100px";
 clearButton.style.cursor = "pointer";
 clearButton.style.borderRadius = "10px";
 // clearButton.style.borderColor = "#00fff0";
-clearButton.addEventListener("click", clearfunc);
+clearButton.addEventListener("click", resetButton);
 document.getElementById("inputField").appendChild(clearButton);
 
 let button = document.createElement("img");
@@ -80,7 +83,7 @@ button.style.borderRadius = "10px";
 button.style.cursor = "pointer";
 button.style.width = "100px";
 button.style.borderColor = "#00fff0";
-button.addEventListener("click", openfunc);
+button.addEventListener("click", numberParaGraph);
 document.getElementById("inputField").appendChild(button);
 
 let rose = document.createElement("img");
@@ -96,23 +99,27 @@ paradiv.href = "https://wa.me/+2348150672809";
 paradiv.id = "para";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
-paradiv.style.color = "green";
+paradiv.style.color = "#aae4aa";
 paradiv.style.width = "auto";
 paradiv.style.height = "auto";
+paradiv.style.margin = "15px 0px";
 document.querySelector("body").appendChild(paradiv);
 
-let buttDiv = document.createElement("p");
+let buttDiv = document.createElement("div");
 buttDiv.href = "https://wa.me/+2348150672809";
 buttDiv.id = "buttDiv";
+// buttDiv.textContent = "jackson";
 buttDiv.style.fontWeight = "bold";
 buttDiv.style.fontSize = "15px";
 document.querySelector("body").appendChild(buttDiv);
 
-function clearfunc() {
+function resetButton() {
   const inputField = document.getElementById("para");
   inputField.textContent = "";
+  const inputField1 = document.getElementById("buttDiv");
+  inputField1.textContent = "";
 }
-function openfunc() {
+function numberParaGraph() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
     "You Can Call Me anytime am always ON and active for you (+2348150672809)";
@@ -151,25 +158,27 @@ function Quotes() {
 Quotes();
 
 function message() {
-  const inputField = document.getElementById("para");
-  inputField.textContent = "";
+  const inputField = document.createElement("p");
+  inputField.textContent = "Swipe down to view content";
+  inputField.style.color = "white";
+  document.getElementById("buttDiv").appendChild(inputField);
   const quote0 = document.createElement("img");
   quote0.src = images[3];
   quote0.style.width = "300px";
   quote0.style.marginTop = "5px";
   quote0.style.borderRadius = "10px";
-  document.getElementById("para").appendChild(quote0);
+  document.getElementById("buttDiv").appendChild(quote0);
   const quote1 = document.createElement("img");
   quote1.src = images[4];
   quote1.style.width = "300px";
   quote1.style.borderRadius = "10px";
   quote1.style.margin = "10px 5px";
-  document.getElementById("para").appendChild(quote1);
+  document.getElementById("buttDiv").appendChild(quote1);
   const quote2 = document.createElement("img");
   quote2.src = images[5];
   quote2.style.width = "300px";
   quote2.style.borderRadius = "10px";
-  document.getElementById("para").appendChild(quote2);
+  document.getElementById("buttDiv").appendChild(quote2);
 }
 
 function tryReturn() {
