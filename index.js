@@ -13,11 +13,12 @@ let body = document.querySelector("body");
 body.style.textAlign = "center";
 body.style.scrollBehavior = "none";
 body.style.height = "100vh";
-body.style.background = "#e38b8b";
+body.style.background = "#c46666";
 body.style.overflowX = "hidden";
+body.style.color = "white";
 
 let heading = document.createElement("H1");
-heading.textContent = "My name is KOLADE";
+heading.textContent = "My name is Moridiya";
 heading.style.textDecoration = "underline";
 document.querySelector("body").appendChild(heading);
 
@@ -34,8 +35,8 @@ document.querySelector("body").appendChild(mainContainer);
 let img1 = document.createElement("img");
 img1.src = images[6];
 img1.style.borderRadius = "10px 5px";
-img1.style.width = "400px";
-img1.style.height = "250px";
+img1.style.width = "300px";
+img1.style.height = "200px";
 document.getElementById("div").appendChild(img1);
 
 let pTag = document.createElement("p");
@@ -47,8 +48,8 @@ document.getElementById("div").appendChild(pTag);
 let img2 = document.createElement("img");
 img2.src = images[7];
 img2.style.borderRadius = "10px 5px";
-img2.style.width = "400px";
-img2.style.height = "250px";
+img2.style.width = "350px";
+img2.style.height = "310px";
 document.getElementById("div").appendChild(img2);
 
 let h2 = document.createElement("H2");
@@ -96,7 +97,8 @@ paradiv.id = "para";
 paradiv.style.fontWeight = "bold";
 paradiv.style.fontSize = "15px";
 paradiv.style.color = "green";
-paradiv.style.width = "500px";
+paradiv.style.width = "auto";
+paradiv.style.height = "auto";
 document.querySelector("body").appendChild(paradiv);
 
 let buttDiv = document.createElement("p");
@@ -126,18 +128,19 @@ function Roses() {
   redRose.src = images[0];
   redRose.style.width = "300px";
   redRose.style.borderRadius = "10px 20px";
-  redRose.style.marginTop = "60px";
+  redRose.style.marginTop = "20px";
   document.getElementById("para").appendChild(redRose);
 }
 
 function Quotes() {
   const button = document.createElement("button");
   button.textContent = "Love Quotes";
-  button.style.fontWeight = "normal";
+  button.style.fontWeight = "bold";
+  button.style.fontSize = "15px";
   button.style.padding = "5px 10px";
   button.style.textAlign = "center";
   button.style.borderRadius = "10px";
-  button.style.background = "#000";
+  button.style.background = "#c46666";
   button.style.color = "#fff";
   button.style.cursor = "pointer";
   button.style.borderColor = "#00fff0";
