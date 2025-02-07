@@ -87,7 +87,7 @@ button.addEventListener("click", numberParaGraph);
 document.getElementById("inputField").appendChild(button);
 
 let rose = document.createElement("img");
-rose.src = images[1];c 
+rose.src = images[1];
 rose.style.borderRadius = "10px";
 rose.style.width = "100px";
 rose.style.cursor = "pointer";
