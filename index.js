@@ -117,16 +117,17 @@ rose.style.cursor = "pointer";
 rose.addEventListener("click", Roses);
 document.getElementById("buttonContainer").appendChild(rose);
 
-let paradiv = document.createElement("a");
-paradiv.href = "https://wa.me/+2348150672809";
-paradiv.id = "para";
-paradiv.style.fontWeight = "bold";
-paradiv.style.fontSize = "15px";
-paradiv.style.color = "#aae4aa";
-paradiv.style.width = "auto";
-paradiv.style.height = "auto";
-paradiv.style.margin = "15px 0px";
-document.querySelector("body").appendChild(paradiv);
+let paraGraphAnchor = document.createElement("a");
+paraGraphAnchor.href = "https://wa.me/+2348150672809";
+paraGraphAnchor.id = "paraGraphAnchor";
+paraGraphAnchor.style.fontWeight = "bold";
+paraGraphAnchor.style.fontSize = "15px";
+paraGraphAnchor.style.padding = "15px";
+paraGraphAnchor.style.color = "#aae4aa";
+paraGraphAnchor.style.width = "auto";
+paraGraphAnchor.style.height = "auto";
+paraGraphAnchor.style.margin = "15px 0px";
+document.querySelector("body").appendChild(paraGraphAnchor);
 
 let buttDiv = document.createElement("div");
 buttDiv.href = "https://wa.me/+2348150672809";
@@ -137,29 +138,29 @@ buttDiv.style.fontSize = "15px";
 document.querySelector("body").appendChild(buttDiv);
 
 function resetButton() {
-  const emptyContent0 = document.getElementById("para");
+  const emptyContent0 = document.getElementById("paraGraphAnchor");
   emptyContent0.textContent = "";
   const emptyContent1 = document.getElementById("buttDiv");
   emptyContent1.textContent = "";
 }
 function numberParaGraph() {
-  let paraGraph = document.getElementById("para");
+  let paraGraph = document.getElementById("paraGraphAnchor");
   paraGraph.textContent =
-    "You Can Call Me anytime am always ON and active for you (+2348150672809) Either WhatsApp or Mobile Call, //n am availey";
-  //   paraGraph.style.marginBottom = "20px";
+    "You Can Call Me anytime am always ON and active for you (+2348150672809) Either WhatsApp or Mobile Call, am availey";
+  paraGraph.style.fontSize = "20px";
   document.querySelector("body").appendChild(paraGraph);
 }
 
 function Roses() {
   // This const code makes only the image to display once and not multiple times
-  const emptyContent = document.getElementById("para");
+  const emptyContent = document.getElementById("paraGraphAnchor");
   emptyContent.textContent = "";
   let redRose = document.createElement("img");
   redRose.src = images[0];
   redRose.style.width = "300px";
   redRose.style.borderRadius = "10px 20px";
   redRose.style.marginTop = "20px";
-  document.getElementById("para").appendChild(redRose);
+  document.getElementById("paraGraphAnchor").appendChild(redRose);
 }
 
 function Quotes() {
@@ -181,16 +182,16 @@ function Quotes() {
 Quotes();
 
 function message() {
-  // THIS IF-STATEMENT MAKES THE QUOTES TO DISPLAY ONLY ONCE
+  // THIS AN IF-STATEMENT THAT MAKES THE QUOTES TO DISPLAY ONLY ONCE
   if (document.getElementById("quote0")) {
     return;
   }
 
-  const paraGraph = document.createElement("p");
-  paraGraph.id = "paraGraph";
-  paraGraph.textContent = "I love you more than you can ever imagine";
-  paraGraph.style.color = "white";
-  document.getElementById("buttDiv").appendChild(paraGraph);
+  //   const paraGraph = document.createElement("p");
+  //   paraGraph.id = "paraGraph";
+  //   paraGraph.textContent = "I love you more than you can ever imagine";
+  //   paraGraph.style.color = "white";
+  //   document.getElementById("buttDiv").appendChild(paraGraph);
   const quote0 = document.createElement("img");
   quote0.id = "quote0";
   quote0.src = images[3];
