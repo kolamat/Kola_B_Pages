@@ -9,6 +9,21 @@ const images = [
   "red.jpg",
 ];
 
+const personal = [
+  {
+    name: "Mikhail Mordiyyah0",
+    image: "mor1.jpg",
+  },
+  {
+    name: "Mikhail Mordiyyah1",
+    image: "mor2.jpg",
+  },
+  {
+    name: "Mikhail Mordiyyah2",
+    image: "mor3.jpg",
+  },
+];
+
 let body = document.querySelector("body");
 body.style.textAlign = "center";
 body.style.scrollBehavior = "none";
@@ -16,14 +31,22 @@ body.style.height = "100vh";
 body.style.background = "#c46666";
 body.style.overflowX = "hidden";
 body.style.color = "white";
+body.style.margin = "0px";
 body.style.fontFamily = "'Crimson Text', serif";
 
 let heading = document.createElement("H1");
 heading.textContent = "My name is MIKHAIL MORDIYYAH";
 heading.style.textDecoration = "line-through";
-heading.style.fontSize = "20px";
+heading.style.fontSize = "23px";
 heading.style.color = "#490e0e";
 document.querySelector("body").appendChild(heading);
+
+let headImage = document.createElement("div");
+headImage.id = "headImage";
+headImage.style.display = "flex";
+headImage.style.justifyContent = "space-between";
+headImage.style.marginBottom = "20px";
+document.querySelector("body").appendChild(headImage);
 
 const mainContainer = document.createElement("div");
 mainContainer.id = "div";
@@ -60,7 +83,7 @@ h2.textContent = "But am starting to fall for him";
 document.querySelector("body").appendChild(h2);
 
 let buttonContainer = document.createElement("div");
-buttonContainer.id = "inputField";
+buttonContainer.id = "buttonContainer";
 buttonContainer.style.display = "flex";
 buttonContainer.style.flexWrap = "wrap";
 buttonContainer.style.gap = "20px";
@@ -74,7 +97,7 @@ clearButton.style.cursor = "pointer";
 clearButton.style.borderRadius = "10px";
 // clearButton.style.borderColor = "#00fff0";
 clearButton.addEventListener("click", resetButton);
-document.getElementById("inputField").appendChild(clearButton);
+document.getElementById("buttonContainer").appendChild(clearButton);
 
 let button = document.createElement("img");
 button.src = images[2];
@@ -84,7 +107,7 @@ button.style.cursor = "pointer";
 button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", numberParaGraph);
-document.getElementById("inputField").appendChild(button);
+document.getElementById("buttonContainer").appendChild(button);
 
 let rose = document.createElement("img");
 rose.src = images[1];
@@ -92,7 +115,7 @@ rose.style.borderRadius = "10px";
 rose.style.width = "100px";
 rose.style.cursor = "pointer";
 rose.addEventListener("click", Roses);
-document.getElementById("inputField").appendChild(rose);
+document.getElementById("buttonContainer").appendChild(rose);
 
 let paradiv = document.createElement("a");
 paradiv.href = "https://wa.me/+2348150672809";
@@ -114,23 +137,23 @@ buttDiv.style.fontSize = "15px";
 document.querySelector("body").appendChild(buttDiv);
 
 function resetButton() {
-  const inputField = document.getElementById("para");
-  inputField.textContent = "";
-  const inputField1 = document.getElementById("buttDiv");
-  inputField1.textContent = "";
+  const emptyContent0 = document.getElementById("para");
+  emptyContent0.textContent = "";
+  const emptyContent1 = document.getElementById("buttDiv");
+  emptyContent1.textContent = "";
 }
 function numberParaGraph() {
   let paraGraph = document.getElementById("para");
   paraGraph.textContent =
-    "You Can Call Me anytime am always ON and active for you (+2348150672809)";
+    "You Can Call Me anytime am always ON and active for you (+2348150672809) Either WhatsApp or Mobile Call, //n am availey";
   //   paraGraph.style.marginBottom = "20px";
   document.querySelector("body").appendChild(paraGraph);
 }
 
 function Roses() {
   // This const code makes only the image to display once and not multiple times
-  const inputField = document.getElementById("para");
-  inputField.textContent = "";
+  const emptyContent = document.getElementById("para");
+  emptyContent.textContent = "";
   let redRose = document.createElement("img");
   redRose.src = images[0];
   redRose.style.width = "300px";
@@ -152,29 +175,38 @@ function Quotes() {
   button.style.cursor = "pointer";
   button.style.borderColor = "#00fff0";
   button.addEventListener("click", message);
-  document.getElementById("inputField").appendChild(button);
+  document.getElementById("buttonContainer").appendChild(button);
 }
 
 Quotes();
 
 function message() {
-  const inputField = document.createElement("p");
-  inputField.textContent = "Swipe down to view content";
-  inputField.style.color = "white";
-  document.getElementById("buttDiv").appendChild(inputField);
+  // THIS IF-STATEMENT MAKES THE QUOTES TO DISPLAY ONLY ONCE
+  if (document.getElementById("quote0")) {
+    return;
+  }
+
+  const paraGraph = document.createElement("p");
+  paraGraph.id = "paraGraph";
+  paraGraph.textContent = "I love you more than you can ever imagine";
+  paraGraph.style.color = "white";
+  document.getElementById("buttDiv").appendChild(paraGraph);
   const quote0 = document.createElement("img");
+  quote0.id = "quote0";
   quote0.src = images[3];
   quote0.style.width = "300px";
   quote0.style.marginTop = "5px";
   quote0.style.borderRadius = "10px";
   document.getElementById("buttDiv").appendChild(quote0);
   const quote1 = document.createElement("img");
+  quote1.id = "quote1";
   quote1.src = images[4];
   quote1.style.width = "300px";
   quote1.style.borderRadius = "10px";
   quote1.style.margin = "10px 5px";
   document.getElementById("buttDiv").appendChild(quote1);
   const quote2 = document.createElement("img");
+  quote2.id = "quote2";
   quote2.src = images[5];
   quote2.style.width = "300px";
   quote2.style.borderRadius = "10px";
@@ -182,5 +214,21 @@ function message() {
 }
 
 function tryReturn() {
-  return "I am a return statement";
+  personal.map((person) => {
+    // const paraGraph = document.createElement("p");
+    // paraGraph.textContent = person.name;
+    // document.getElementById("headImage").appendChild(paraGraph);
+    const image = document.createElement("img");
+    image.src = person.image;
+    image.style.width = "120px";
+    image.style.borderRadius = "10px";
+
+    // this if statement is used to give margin to the second image and apply style conditionally
+    if (person.image === "mor1.jpg" || person.image === "mor3.jpg") {
+      image.style.margin = "20px 2px";
+    }
+    document.getElementById("headImage").appendChild(image);
+  });
 }
+
+tryReturn();
