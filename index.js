@@ -30,15 +30,15 @@ const images = [
 
 const personal = [
   {
-    name: "",
+    name: "M",
     image: "mor1.jpg",
   },
   {
-    name: "Mikhail Mordiyyah",
+    name: "M",
     image: "mor2.jpg",
   },
   {
-    name: "",
+    name: "M",
     image: "mor3.jpg",
   },
 ];
@@ -54,12 +54,16 @@ body.style.margin = "0px";
 body.style.padding = "0px 20px 0px 5px";
 body.style.fontFamily = "'Crimson Text', serif";
 
-let heading = document.createElement("H1");
-heading.textContent = "My name is MIKHAIL MORDIYYAH";
-heading.style.textDecoration = "line-through";
-heading.style.fontSize = "23px";
-heading.style.color = "#490e0e";
-document.querySelector("body").appendChild(heading);
+var h1Prompt = prompt("what your name??");
+
+let h1 = document.createElement("H1");
+// h1.textContent = "My name is MIKHAIL MORDIYYAH";
+h1.textContent = "Hi " + h1Prompt;
+h1.style.textDecoration = "line-through";
+h1.style.fontSize = "23px";
+h1.style.color = "#490e0e";
+h1.style.textTransform = "uppercase";
+body.appendChild(h1);
 
 const imageContainer = document.createElement("div");
 imageContainer.id = "imageContainer";
@@ -67,7 +71,7 @@ imageContainer.style.display = "flex";
 imageContainer.style.flexDirection = "colunm";
 imageContainer.style.justifyContent = "space-between";
 imageContainer.style.justifyItems = "stretch";
-document.querySelector("body").appendChild(imageContainer);
+body.appendChild(imageContainer);
 
 const mainContainer = document.createElement("div");
 mainContainer.id = "div";
@@ -77,31 +81,31 @@ mainContainer.style.justifyItems = "center";
 // mainContainer.style.gridTemplateColumns = "repeat(auto-fill, 380px)";
 mainContainer.style.placeItems = "center";
 // mainContainer.style.gridTemplateColumns = "380px 380px 380px";
-document.querySelector("body").appendChild(mainContainer);
+body.appendChild(mainContainer);
 
 let img1 = document.createElement("img");
 img1.src = images[6];
 img1.style.borderRadius = "10px 5px";
 img1.style.width = "300px";
 img1.style.height = "200px";
-document.getElementById("div").appendChild(img1);
+div.appendChild(img1);
 
 let pTag = document.createElement("p");
 pTag.textContent =
   "As much as I really wanna date JOHNSON at the same I really don’t want to,";
 pTag.style.fontWeight = "bold";
-document.getElementById("div").appendChild(pTag);
+div.appendChild(pTag);
 
 let img2 = document.createElement("img");
 img2.src = images[7];
 img2.style.borderRadius = "10px 5px";
 img2.style.width = "350px";
 img2.style.height = "310px";
-document.getElementById("div").appendChild(img2);
+div.appendChild(img2);
 
 let h2 = document.createElement("H2");
 h2.textContent = "But am starting to fall for him.";
-document.querySelector("body").appendChild(h2);
+body.appendChild(h2);
 
 let buttonContainer = document.createElement("div");
 buttonContainer.id = "buttonContainer";
@@ -128,7 +132,7 @@ button.style.cursor = "pointer";
 button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", numberParaGraph);
-document.getElementById("buttonContainer").appendChild(button);
+buttonContainer.appendChild(button);
 
 let rose = document.createElement("img");
 rose.src = images[1];
@@ -136,7 +140,7 @@ rose.style.borderRadius = "10px";
 rose.style.width = "100px";
 rose.style.cursor = "pointer";
 rose.addEventListener("click", Roses);
-document.getElementById("buttonContainer").appendChild(rose);
+buttonContainer.appendChild(rose);
 
 let paraGraphAnchor = document.createElement("a");
 paraGraphAnchor.href = "https://wa.me/+2348150672809";
@@ -150,7 +154,7 @@ paraGraphAnchor.style.color = "#aae4aa";
 paraGraphAnchor.style.width = "auto";
 paraGraphAnchor.style.height = "auto";
 paraGraphAnchor.style.margin = "15px 0px";
-document.querySelector("body").appendChild(paraGraphAnchor);
+body.appendChild(paraGraphAnchor);
 
 let buttDiv = document.createElement("div");
 buttDiv.href = "https://wa.me/+2348150672809";
@@ -158,7 +162,7 @@ buttDiv.id = "buttDiv";
 // buttDiv.textContent = "jackson";
 buttDiv.style.fontWeight = "bold";
 buttDiv.style.fontSize = "15px";
-document.querySelector("body").appendChild(buttDiv);
+body.appendChild(buttDiv);
 
 function resetButton() {
   const emptyContent0 = document.getElementById("paraGraphAnchor");
@@ -172,7 +176,7 @@ function numberParaGraph() {
   paraGraph.textContent =
     "You Can Call Me anytime am always ON and active for you (+2348150672809) Either WhatsApp or Mobile Call, am availey";
   paraGraph.style.fontSize = "20px";
-  document.querySelector("body").appendChild(paraGraph);
+  body.appendChild(paraGraph);
 }
 
 function Roses() {
@@ -206,7 +210,7 @@ function Quotes() {
   button.style.cursor = "pointer";
   button.style.borderColor = "#00fff0";
   button.addEventListener("click", message);
-  document.getElementById("buttonContainer").appendChild(button);
+  buttonContainer.appendChild(button);
 }
 
 Quotes();
@@ -223,7 +227,7 @@ function message() {
   quote0.style.width = "300px";
   quote0.style.marginTop = "5px";
   quote0.style.borderRadius = "10px";
-  document.getElementById("buttDiv").appendChild(quote0);
+  buttDiv.appendChild(quote0);
 
   const quote1 = document.createElement("img");
   quote1.id = "quote1";
@@ -231,14 +235,14 @@ function message() {
   quote1.style.width = "300px";
   quote1.style.borderRadius = "10px";
   quote1.style.margin = "10px 5px";
-  document.getElementById("buttDiv").appendChild(quote1);
+  buttDiv.appendChild(quote1);
 
   const quote2 = document.createElement("img");
   quote2.id = "quote2";
   quote2.src = images[5];
   quote2.style.width = "300px";
   quote2.style.borderRadius = "10px";
-  document.getElementById("buttDiv").appendChild(quote2);
+  buttDiv.appendChild(quote2);
 }
 
 function tryReturn() {
@@ -281,3 +285,15 @@ tryReturn();
 // const pNames = document.createElement("p");
 // pNames.id = "pNames";
 // document.querySelector("body").appendChild(pNames);
+// var count = 0;
+
+// function testSwitchcase(value) {
+//   switch (value) {
+//     case 1:
+//       count++;
+//       return count;
+//     case 2:
+//       count--;
+//       return count;
+//   }
+// }
