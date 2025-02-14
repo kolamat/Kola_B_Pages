@@ -186,6 +186,14 @@ clearButton.style.borderRadius = "10px";
 clearButton.addEventListener("click", resetButton);
 buttonContainer.appendChild(clearButton);
 
+let rose = document.createElement("img");
+rose.src = images[1];
+rose.style.borderRadius = "10px";
+rose.style.width = "100px";
+rose.style.cursor = "pointer";
+rose.addEventListener("click", Roses);
+buttonContainer.appendChild(rose);
+
 let button = document.createElement("img");
 button.src = images[2];
 button.style.textAlign = "center";
@@ -195,14 +203,6 @@ button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", numberParaGraph);
 buttonContainer.appendChild(button);
-
-let rose = document.createElement("img");
-rose.src = images[1];
-rose.style.borderRadius = "10px";
-rose.style.width = "100px";
-rose.style.cursor = "pointer";
-rose.addEventListener("click", Roses);
-buttonContainer.appendChild(rose);
 
 let paraGraphAnchor = document.createElement("a");
 paraGraphAnchor.href = "https://wa.me/+2348150672809";
