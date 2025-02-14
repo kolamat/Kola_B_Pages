@@ -54,6 +54,24 @@ body.style.margin = "0px";
 body.style.padding = "0px 20px 0px 5px";
 body.style.fontFamily = "'Crimson Text', serif";
 
+// Define the CSS animation
+const style = document.createElement("style");
+style.textContent = `
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+`;
+document.head.appendChild(style);
+
 // Create a form element
 const form = document.createElement("form");
 form.id = "nameForm";
@@ -219,6 +237,11 @@ function numberParaGraph() {
     "You Can Call Me anytime am always ON and active for you (+2348150672809) Either WhatsApp or Mobile Call, am availey";
   paraGraph.style.fontSize = "20px";
   body.appendChild(paraGraph);
+  paraGraph.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
 }
 
 function Roses() {
@@ -236,6 +259,11 @@ function Roses() {
   redRose.style.width = "300px";
   redRose.style.borderRadius = "10px 20px";
   redRose.style.marginTop = "20px";
+  redRose.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
   paraGraphAnchor.appendChild(redRose);
 }
 
@@ -269,6 +297,12 @@ function message() {
   quote0.style.width = "300px";
   quote0.style.marginTop = "5px";
   quote0.style.borderRadius = "10px";
+  quote0.classList.add("fade-in");
+  quote0.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
   buttDiv.appendChild(quote0);
 
   const quote1 = document.createElement("img");
@@ -277,6 +311,13 @@ function message() {
   quote1.style.width = "300px";
   quote1.style.borderRadius = "10px";
   quote1.style.margin = "10px 5px";
+  quote1.classList.add("fade-in");
+  quote1.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+
   buttDiv.appendChild(quote1);
 
   const quote2 = document.createElement("img");
@@ -284,6 +325,13 @@ function message() {
   quote2.src = images[5];
   quote2.style.width = "300px";
   quote2.style.borderRadius = "10px";
+  quote2.classList.add("fade-in");
+  quote2.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+
   buttDiv.appendChild(quote2);
 }
 
