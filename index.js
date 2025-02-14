@@ -57,7 +57,7 @@ body.style.fontFamily = "'Crimson Text', serif";
 // Create a form element
 const form = document.createElement("form");
 form.id = "nameForm";
-form.style.marginBottom = "20px";
+form.style.margin = "20px 0px";
 
 // Create an input field for the name
 const nameInput = document.createElement("input");
