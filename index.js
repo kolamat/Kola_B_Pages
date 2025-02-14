@@ -34,7 +34,7 @@ const personal = [
     image: "mor1.jpg",
   },
   {
-    name: "M",
+    name: "A",
     image: "mor2.jpg",
   },
   {
@@ -81,10 +81,12 @@ form.style.margin = "20px 0px";
 const nameInput = document.createElement("input");
 nameInput.type = "text";
 nameInput.placeholder = "Enter your name";
+// nameInput.style.color = "white";
 nameInput.style.padding = "10px";
 nameInput.style.borderRadius = "5px";
-nameInput.style.border = "1px solid #ccc";
+nameInput.style.border = "1px solid black";
 nameInput.style.marginRight = "10px";
+nameInput.style.background = "none";
 form.appendChild(nameInput);
 
 // Create a submit button
@@ -93,7 +95,7 @@ submitButton.type = "submit";
 submitButton.textContent = "Submit";
 submitButton.style.padding = "10px 20px";
 submitButton.style.borderRadius = "5px";
-submitButton.style.border = "none";
+submitButton.style.border = "solid black 1px";
 submitButton.style.background = "#c46666";
 submitButton.style.color = "#fff";
 submitButton.style.cursor = "pointer";
@@ -112,9 +114,9 @@ form.addEventListener("submit", function (event) {
   // Create an h1 element to display the name
   let h1 = document.createElement("H1");
   h1.id = "h1";
-  h1.textContent = "Hi " + name;
-  h1.style.textDecoration = "line-through";
-  h1.style.fontSize = "23px";
+  h1.textContent = "Hi " + name + ", How are you doing today?";
+  h1.style.fontStyle = "italic";
+  h1.style.fontSize = "20px";
   h1.style.color = "#490e0e";
   h1.style.textTransform = "uppercase";
 
@@ -356,6 +358,8 @@ function tryReturn() {
     //THIS IF-STATEMENT IS USED TO CHECK IF THE INDEX IS LESS THAN 2
     if (index === 1) {
       personContainer.style.margin = "20px 2px";
+      personContainer.style.fontSize = "30px";
+      personContainer.style.fontWeight = "bold";
     }
     // THIS IF-STATEMENT IS USED TO GIVE MARGIN TO THE FIRST AND THIRD IMAGE
 
