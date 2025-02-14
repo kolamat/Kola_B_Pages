@@ -54,16 +54,58 @@ body.style.margin = "0px";
 body.style.padding = "0px 20px 0px 5px";
 body.style.fontFamily = "'Crimson Text', serif";
 
-var h1Prompt = prompt("what your name??");
+// Create a form element
+const form = document.createElement("form");
+form.id = "nameForm";
+form.style.marginBottom = "20px";
 
-let h1 = document.createElement("H1");
-// h1.textContent = "My name is MIKHAIL MORDIYYAH";
-h1.textContent = "Hi " + h1Prompt;
-h1.style.textDecoration = "line-through";
-h1.style.fontSize = "23px";
-h1.style.color = "#490e0e";
-h1.style.textTransform = "uppercase";
-body.appendChild(h1);
+// Create an input field for the name
+const nameInput = document.createElement("input");
+nameInput.type = "text";
+nameInput.placeholder = "Enter your name";
+nameInput.style.padding = "10px";
+nameInput.style.borderRadius = "5px";
+nameInput.style.border = "1px solid #ccc";
+nameInput.style.marginRight = "10px";
+form.appendChild(nameInput);
+
+// Create a submit button
+const submitButton = document.createElement("button");
+submitButton.type = "submit";
+submitButton.textContent = "Submit";
+submitButton.style.padding = "10px 20px";
+submitButton.style.borderRadius = "5px";
+submitButton.style.border = "none";
+submitButton.style.background = "#c46666";
+submitButton.style.color = "#fff";
+submitButton.style.cursor = "pointer";
+form.appendChild(submitButton);
+
+// Append the form to the body at the top
+body.insertBefore(form, body.firstChild);
+
+// Add an event listener to the form to handle the submit event
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Get the value of the input field
+  const name = nameInput.value;
+
+  // Create an h1 element to display the name
+  let h1 = document.createElement("H1");
+  h1.id = "h1";
+  h1.textContent = "Hi " + name;
+  h1.style.textDecoration = "line-through";
+  h1.style.fontSize = "23px";
+  h1.style.color = "#490e0e";
+  h1.style.textTransform = "uppercase";
+
+  // Append the h1 element to the body at the top
+  body.insertBefore(h1, body.firstChild);
+
+  // Remove the form from the body
+  form.remove();
+});
 
 const imageContainer = document.createElement("div");
 imageContainer.id = "imageContainer";
