@@ -72,10 +72,22 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+const formDiv = document.createElement("div");
+formDiv.style.display = "flex";
+formDiv.style.justifyContent = "space-between";
+formDiv.style.alignItems = "center";
+body.appendChild(formDiv);
+
+const logo = document.createElement("img");
+logo.src = "MAM.png";
+logo.style.width = "100px";
+formDiv.appendChild(logo);
+
 // Create a form element
 const form = document.createElement("form");
 form.id = "nameForm";
 form.style.margin = "20px 0px";
+formDiv.appendChild(form);
 
 // Create an input field for the name
 const nameInput = document.createElement("input");
@@ -102,7 +114,7 @@ submitButton.style.cursor = "pointer";
 form.appendChild(submitButton);
 
 // Append the form to the body at the top
-body.insertBefore(form, body.firstChild);
+body.insertBefore(formDiv, body.firstChild);
 
 // Add an event listener to the form to handle the submit event
 form.addEventListener("submit", function (event) {
@@ -126,11 +138,6 @@ form.addEventListener("submit", function (event) {
   // Remove the form from the body
   form.remove();
 });
-
-const logo = document.createElement("img");
-logo.src = "MAM.png";
-logo.style.width = "100px";
-body.appendChild(logo);
 
 const imageContainer = document.createElement("div");
 imageContainer.id = "imageContainer";
