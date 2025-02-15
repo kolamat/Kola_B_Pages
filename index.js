@@ -133,7 +133,7 @@ form.addEventListener("submit", function (event) {
   h1.style.textTransform = "uppercase";
 
   // Append the h1 element to the body at the top
-  body.insertBefore(h1, body.firstChild);
+  formDiv.appendChild(h1, body.firstChild);
 
   // Remove the form from the body
   form.remove();
