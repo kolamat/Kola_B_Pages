@@ -127,6 +127,11 @@ form.addEventListener("submit", function (event) {
   form.remove();
 });
 
+const logo = document.createElement("img");
+logo.src = "MAM.png";
+logo.style.width = "100px";
+body.appendChild(logo);
+
 const imageContainer = document.createElement("div");
 imageContainer.id = "imageContainer";
 imageContainer.style.display = "flex";
@@ -140,7 +145,7 @@ mainContainer.id = "div";
 mainContainer.style.width = "100%";
 mainContainer.style.display = "grid";
 mainContainer.style.justifyItems = "center";
-// mainContainer.style.gridTemplateColumns = "repeat(auto-fill, 380px)";
+mainContainer.style.justifyContent = "center";
 mainContainer.style.placeItems = "center";
 // mainContainer.style.gridTemplateColumns = "380px 380px 380px";
 body.appendChild(mainContainer);
