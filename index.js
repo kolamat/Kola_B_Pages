@@ -80,7 +80,7 @@ body.appendChild(formDiv);
 
 const logo = document.createElement("img");
 logo.src = "MAM.png";
-logo.style.width = "100px";
+logo.style.width = "70px";
 formDiv.appendChild(logo);
 
 // Create a form element
