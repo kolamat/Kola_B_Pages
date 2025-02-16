@@ -130,7 +130,7 @@ form.addEventListener("submit", function (event) {
   h1.id = "h1";
   h1.textContent = "Hi " + name + ", How are you doing today?";
   h1.style.fontStyle = "italic";
-  h1.style.fontSize = "20px";
+  h1.style.fontSize = "18px";
   h1.style.color = "#490e0e";
   h1.style.textTransform = "uppercase";
 
