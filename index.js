@@ -31,11 +31,11 @@ const images = [
 const personal = [
   {
     name: "M",
-    image: "mor1.jpg",
+    image: "mor2.jpg",
   },
   {
     name: "A",
-    image: "mor2.jpg",
+    image: "mor1.jpg",
   },
   {
     name: "M",
@@ -87,6 +87,7 @@ formDiv.appendChild(logo);
 const form = document.createElement("form");
 form.id = "nameForm";
 form.style.margin = "20px 0px";
+form.style.display = "flex";
 formDiv.appendChild(form);
 
 // Create an input field for the name
@@ -99,6 +100,7 @@ nameInput.style.borderRadius = "5px";
 nameInput.style.border = "1px solid black";
 nameInput.style.marginRight = "10px";
 nameInput.style.background = "none";
+nameInput.style.width = "140px";
 form.appendChild(nameInput);
 
 // Create a submit button
