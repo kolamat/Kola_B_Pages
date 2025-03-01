@@ -26,6 +26,7 @@ const images = [
   "quotes2.png",
   "red1.jpg",
   "red.jpg",
+  "RamadanKareem.png",
 ];
 
 const personal = [
@@ -47,12 +48,12 @@ let body = document.querySelector("body");
 body.style.textAlign = "center";
 body.style.scrollBehavior = "smooth";
 body.style.height = "100vh";
-body.style.background = "#c46666";
+body.style.background = "#144534";
 body.style.overflowX = "hidden";
 body.style.color = "white";
 body.style.margin = "0px";
 body.style.padding = "0px 20px 0px 5px";
-body.style.fontFamily = "'Crimson Text', serif";
+body.style.fontFamily = "'Goudy Bookletter 1911', serif";
 
 // Define the CSS animation
 const style = document.createElement("style");
@@ -79,7 +80,7 @@ formDiv.style.alignItems = "center";
 body.appendChild(formDiv);
 
 const logo = document.createElement("img");
-logo.src = "MAM.png";
+logo.src = "MAM1.png";
 logo.style.width = "70px";
 formDiv.appendChild(logo);
 
@@ -94,7 +95,7 @@ formDiv.appendChild(form);
 const nameInput = document.createElement("input");
 nameInput.type = "text";
 nameInput.placeholder = "Enter your name";
-// nameInput.style.color = "white";
+nameInput.style.color = "white";
 nameInput.style.padding = "10px";
 nameInput.style.borderRadius = "5px";
 nameInput.style.border = "1px solid black";
@@ -110,7 +111,7 @@ submitButton.textContent = "Submit";
 submitButton.style.padding = "10px 20px";
 submitButton.style.borderRadius = "5px";
 submitButton.style.border = "solid black 1px";
-submitButton.style.background = "#c46666";
+submitButton.style.background = "#13805A";
 submitButton.style.color = "#fff";
 submitButton.style.cursor = "pointer";
 form.appendChild(submitButton);
@@ -128,18 +129,32 @@ form.addEventListener("submit", function (event) {
   // Create an h1 element to display the name
   let h1 = document.createElement("H1");
   h1.id = "h1";
-  h1.textContent = "Hi " + name + ", How are you doing today?";
+  h1.textContent =
+    "Hi " +
+    name +
+    ", Happy Ramadan Kareem, I wish you a blessed month of Ramadan.";
   h1.style.fontStyle = "italic";
-  h1.style.fontSize = "18px";
-  h1.style.color = "#490e0e";
+  h1.style.fontSize = "15px";
+  h1.style.justifyContent = "center";
+  h1.style.alignContent = "center";
+  h1.style.textAlign = "center";
+  h1.style.fontStyle = "normal";
   h1.style.textTransform = "uppercase";
 
   // Append the h1 element to the body at the top
-  formDiv.appendChild(h1, body.firstChild);
+  //   formDiv.appendChild(h1, body.firstChild);
+  formParagraph.appendChild(h1, body.firstChild);
 
   // Remove the form from the body
   form.remove();
 });
+
+const formParagraph = document.createElement("p");
+// formParagraph.textContent = "Enter your name to get a special message";
+formParagraph.style.fontWeight = "bold";
+formParagraph.style.fontStyle = "normal";
+formParagraph.style.fontSize = "10px";
+body.appendChild(formParagraph);
 
 const imageContainer = document.createElement("div");
 imageContainer.id = "imageContainer";
@@ -149,6 +164,13 @@ imageContainer.style.justifyContent = "space-between";
 imageContainer.style.justifyItems = "stretch";
 body.appendChild(imageContainer);
 
+let h2 = document.createElement("H2");
+h2.textContent = "Happy Ramadan Kareem.";
+h2.style.justifyContent = "center";
+h2.style.alignContent = "center";
+h2.style.textAlign = "center";
+body.appendChild(h2);
+
 const mainContainer = document.createElement("div");
 mainContainer.id = "div";
 mainContainer.style.width = "100%";
@@ -156,7 +178,7 @@ mainContainer.style.display = "grid";
 mainContainer.style.justifyItems = "center";
 mainContainer.style.justifyContent = "center";
 mainContainer.style.placeItems = "center";
-// mainContainer.style.gridTemplateColumns = "380px 380px 380px";
+mainContainer.style.padding = "0px 0px 0px 10px";
 body.appendChild(mainContainer);
 
 let img1 = document.createElement("img");
@@ -164,24 +186,27 @@ img1.src = images[6];
 img1.style.borderRadius = "10px 5px";
 img1.style.width = "300px";
 img1.style.height = "200px";
-div.appendChild(img1);
+// div.appendChild(img1);
 
 let pTag = document.createElement("p");
 pTag.textContent =
   "As much as I really wanna date JOHNSON at the same I really don’t want to,";
 pTag.style.fontWeight = "bold";
-div.appendChild(pTag);
+// div.appendChild(pTag);
 
 let img2 = document.createElement("img");
 img2.src = images[7];
 img2.style.borderRadius = "10px 5px";
 img2.style.width = "350px";
 img2.style.height = "310px";
-div.appendChild(img2);
+// div.appendChild(img2);
 
-let h2 = document.createElement("H2");
-h2.textContent = "But am starting to fall for him.";
-body.appendChild(h2);
+let ramadanKareem = document.createElement("img");
+ramadanKareem.src = images[8];
+ramadanKareem.style.borderRadius = "10px 5px";
+ramadanKareem.style.width = "350px";
+ramadanKareem.style.height = "310px";
+div.appendChild(ramadanKareem);
 
 let buttonContainer = document.createElement("div");
 buttonContainer.id = "buttonContainer";
@@ -198,7 +223,7 @@ clearButton.style.cursor = "pointer";
 clearButton.style.borderRadius = "10px";
 // clearButton.style.borderColor = "#00fff0";
 clearButton.addEventListener("click", resetButton);
-buttonContainer.appendChild(clearButton);
+// buttonContainer.appendChild(clearButton);
 
 let rose = document.createElement("img");
 rose.src = images[1];
@@ -206,7 +231,7 @@ rose.style.borderRadius = "10px";
 rose.style.width = "100px";
 rose.style.cursor = "pointer";
 rose.addEventListener("click", Roses);
-buttonContainer.appendChild(rose);
+// buttonContainer.appendChild(rose);
 
 let button = document.createElement("img");
 button.src = images[2];
@@ -216,7 +241,7 @@ button.style.cursor = "pointer";
 button.style.width = "100px";
 button.style.borderColor = "#00fff0";
 button.addEventListener("click", numberParaGraph);
-buttonContainer.appendChild(button);
+// buttonContainer.appendChild(button);
 
 let paraGraphAnchor = document.createElement("a");
 paraGraphAnchor.href = "https://wa.me/+2348150672809";
@@ -247,6 +272,7 @@ function resetButton() {
   const emptyContent1 = document.getElementById("buttDiv");
   emptyContent1.textContent = "";
 }
+
 function numberParaGraph() {
   let paraGraph = document.getElementById("paraGraphAnchor");
   paraGraph.textContent =
@@ -296,10 +322,10 @@ function Quotes() {
   button.style.cursor = "pointer";
   button.style.borderColor = "#00fff0";
   button.addEventListener("click", message);
-  buttonContainer.appendChild(button);
+  //   buttonContainer.appendChild(button);
 }
 
-Quotes();
+// Quotes();
 
 function message() {
   // THIS AN IF-STATEMENT THAT MAKES THE QUOTES TO DISPLAY ONLY ONCE
@@ -319,7 +345,7 @@ function message() {
     block: "end",
     inline: "nearest",
   });
-  buttDiv.appendChild(quote0);
+  //   buttDiv.appendChild(quote0);
 
   const quote1 = document.createElement("img");
   quote1.id = "quote1";
@@ -334,7 +360,7 @@ function message() {
     inline: "nearest",
   });
 
-  buttDiv.appendChild(quote1);
+  //   buttDiv.appendChild(quote1);
 
   const quote2 = document.createElement("img");
   quote2.id = "quote2";
@@ -348,7 +374,7 @@ function message() {
     inline: "nearest",
   });
 
-  buttDiv.appendChild(quote2);
+  //   buttDiv.appendChild(quote2);
 }
 
 function tryReturn() {
@@ -391,17 +417,24 @@ tryReturn();
 // document.getElementById("pNames").appendChild(namesArrays);
 
 // const pNames = document.createElement("p");
-// pNames.id = "pNames";
+// pNames.id = "peoplenames";
+// pNames.textContent = namesArrays;
+// pNames.style.display = "block";
 // document.querySelector("body").appendChild(pNames);
-// var count = 0;
 
-// function testSwitchcase(value) {
-//   switch (value) {
-//     case 1:
-//       count++;
-//       return count;
-//     case 2:
-//       count--;
-//       return count;
-//   }
+// if (namesArrays === 2) {
+//   pNames.style.margin = "50px";
 // }
+
+function caseInSwitch(val) {
+  var answer = "";
+  switch (val) {
+    case 1:
+      answer = "";
+      break;
+    case 2:
+  }
+  return answer;
+}
+
+caseInSwitch();
