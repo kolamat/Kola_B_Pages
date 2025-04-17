@@ -12,7 +12,7 @@ body {
   height: 100vh;
   background-image: url(/palm.jpg);
   background-repeat: no-repeat;
-  background-position: inherit;
+  background-position: center;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -49,12 +49,23 @@ body {
 }
 
 .imagecontain2 {
+  display: flex;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .imagediv {
   text-align: center;
+}
+
+#imagecontain {
+  width: 100%;
+  text-align: center;
+}
+
+.fleximage {
+  display: flex;
+  justify-content: space-between;
 }
 
 .imageparagraph {
