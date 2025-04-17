@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  background-image: url(/palm.jpg);
+  background-image: url(./palm.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,7 +35,7 @@ body {
   grid-template-columns: 250px 250px;
   justify-content: center;
   width: 100vw;
-  background-image: url(/morr4.jpg);
+  background-image: url(./morr4.jpg);
   background-repeat: no-repeat;
   background-position: inherit;
   background-position: center;
