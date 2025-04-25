@@ -10,97 +10,47 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  background-image: url(./palm.jpg);
+  background-image: url(images/mor3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow-x: hidden;
+  transition: background-image 0.5s ease-in-out;
 }
 
-.header {
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #800080;
-  border: #a5a852 solid 5px;
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: #ffffff;
-  margin: 10px 8px;
-}
-
-.imagecontainer {
-  display: grid;
-  grid-template-columns: 250px 250px;
-  justify-content: center;
-  width: 100vw;
-  background-image: url(./morr4.jpg);
-  background-repeat: no-repeat;
-  background-position: inherit;
-  background-position: center;
-  background-size: cover;
-  align-items: baseline;
-}
-
-.imagecontain {
+.container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.imagecontain2 {
-  display: flex;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.imagediv {
-  text-align: center;
-}
-
-#imagecontain {
-  width: 100%;
-  text-align: center;
-}
-
-.fleximage {
-  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.imageparagraph {
-  margin: 0;
-  padding: 0;
-  font-size: 50px;
-  font-weight: 900;
-  font-family: "Courier New", Courier, monospace;
-  text-decoration: line-through;
-  text-transform: uppercase;
+button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background: #030e43;
+  color: whitesmoke;
 }
 
-.imageparagraph1 {
-  background: #5f0000;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  color: #ffffff;
+a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
-.imageparagraph2 {
-  background: #000000;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  color: #ffffff;
+.active {
+  background-image: url(images/morr4.jpg);
+  font-weight: bolder;
+  border: black solid 1px;
 }
 
-.imageparagraph3 {
-  background: #ffd700;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
-img {
-  max-width: 200px;
-  justify-self: center;
-  border-radius: 20px;
+.bold {
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #171767;
 }

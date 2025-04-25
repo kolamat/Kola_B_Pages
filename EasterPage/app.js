@@ -29,51 +29,6 @@ const container = document.querySelector(".imagecontainer");
 const containerOne = document.querySelector(".imagecontainer1");
 const containerTwo = document.querySelector(".imagecontainer2");
 
-const fill = document.createElement("button");
-fill.onclick = fillcontainer;
-fill.textContent = "resore images";
-fill.style.padding = "10px 5px";
-fill.style.background = "#3d5923";
-fill.style.color = "#ffffff";
-fill.style.fontSize = "20px";
-// div.appendChild(fill);
-
-const button = document.createElement("button");
-button.onclick = showParagraph;
-button.textContent = "Click me";
-button.style.padding = "10px 5px";
-button.style.background = "#5f0000";
-button.style.color = "#ffffff";
-button.style.fontSize = "20px";
-div.appendChild(button);
-
-const Ma = document.createElement("button");
-Ma.onclick = fillcontainer;
-Ma.textContent = "Ma";
-Ma.style.padding = "10px 5px";
-Ma.style.background = "#5f0000";
-Ma.style.color = "#ffffff";
-Ma.style.fontSize = "20px";
-// div.appendChild(Ma);
-
-const Mo = document.createElement("button");
-Mo.onclick = fillcontainer;
-Mo.textContent = "Mo";
-Mo.style.padding = "10px 5px";
-Mo.style.background = "#5f0000";
-Mo.style.color = "#ffffff";
-Mo.style.fontSize = "20px";
-// div.appendChild(Mo);
-
-const Me = document.createElement("button");
-Me.onclick = fillcontainer;
-Me.textContent = "Me";
-Me.style.padding = "10px 5px";
-Me.style.background = "#5f0000";
-Me.style.color = "#ffffff";
-Me.style.fontSize = "20px";
-// div.appendChild(Me);
-
 function showParagraph() {
   prayerParagraph.style.display = "flex";
 }
