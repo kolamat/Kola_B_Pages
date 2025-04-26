@@ -1,10 +1,13 @@
 const body = document.querySelector("body");
 const h1 = document.querySelector("h1");
+const button = document.querySelector("button");
 
 // With Toggle we can add and remove class automatically when clicked next
 const tForToggle = () => {
   body.classList.toggle("active");
   h1.classList.toggle("bold");
+  button.classList.toggle("btn");
+  console.log(anchor);
 };
 
 // with add we can only add a class and not remove on next click or action

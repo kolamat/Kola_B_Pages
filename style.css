@@ -32,6 +32,13 @@ button {
   padding: 10px 15px;
   border-radius: 5px;
   border: none;
+  background: none;
+  color: white;
+  margin-bottom: 10px;
+  border: grey solid 3px;
+}
+
+.btn {
   background: #030e43;
   color: whitesmoke;
 }
@@ -40,7 +47,9 @@ a {
   font-size: 30px;
   color: white;
   text-decoration: none;
-  margin-bottom: 10px;
+  border: grey solid 3px;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .active {
@@ -53,4 +62,8 @@ a {
   font-weight: bolder;
   text-decoration: underline;
   color: #171767;
+  background: #c0c7ff;
+  border-radius: 10px;
+  padding: 0 10px 10px;
+  margin-top: 5px;
 }

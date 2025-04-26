@@ -5,12 +5,13 @@ const body = document.querySelector("body");
 const div = document.createElement("div");
 div.style.padding = "20px 10px";
 div.style.textAlign = "center";
+div.style.justifyItems = "center";
 body.insertBefore(div, body.firstChild);
 
 const header = document.createElement("header");
 header.className = "header";
 header.textContent = "Happy Easter";
-body.insertBefore(header, body.firstChild);
+div.appendChild(header);
 
 const prayerParagraph = document.createElement("p");
 prayerParagraph.textContent =

@@ -18,29 +18,29 @@ const namesArrays = [
 ];
 
 const images = [
-  "RedRoses.jpg",
-  "goldrose.jpg",
-  "telephone.jpg",
-  "quotes.png",
-  "quotes1.png",
-  "quotes2.png",
-  "red1.jpg",
-  "red.jpg",
-  "RamadanKareem.png",
+  "/images/RedRoses.jpg",
+  "/images/goldrose.jpg",
+  "/images/telephone.jpg",
+  "/images/quotes.png",
+  "/images/quotes1.png",
+  "/images/quotes2.png",
+  "/images/red1.jpg",
+  "/images/red.jpg",
+  "/images/RamadanKareem.png",
 ];
 
 const personal = [
   {
     name: "M",
-    image: "mor2.jpg",
+    image: "/images/mor2.jpg",
   },
   {
     name: "A",
-    image: "mor1.jpg",
+    image: "/images/mor1.jpg",
   },
   {
     name: "M",
-    image: "mor3.jpg",
+    image: "/images/mor3.jpg",
   },
 ];
 
@@ -80,7 +80,7 @@ formDiv.style.alignItems = "center";
 body.appendChild(formDiv);
 
 const logo = document.createElement("img");
-logo.src = "MAM1.png";
+logo.src = "/images/MAM1.png";
 logo.style.width = "70px";
 formDiv.appendChild(logo);
 
@@ -217,7 +217,7 @@ buttonContainer.style.justifyContent = "center";
 body.appendChild(buttonContainer);
 
 let clearButton = document.createElement("img");
-clearButton.src = "./reset.jpg";
+clearButton.src = "/images/reset.jpg";
 clearButton.style.width = "100px";
 clearButton.style.cursor = "pointer";
 clearButton.style.borderRadius = "10px";
