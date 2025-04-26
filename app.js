@@ -7,7 +7,6 @@ const tForToggle = () => {
   body.classList.toggle("active");
   h1.classList.toggle("bold");
   button.classList.toggle("btn");
-  console.log(anchor);
 };
 
 // with add we can only add a class and not remove on next click or action
