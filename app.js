@@ -32,3 +32,10 @@ const rForRemove = () => {
 // 3. use the remove method to remove a class from the elements classes
 // 4. pass the name of the class you want to remove as an argument to the remove method
 // 5. save your changes by updating the elemnts classlist properpty
+
+const modal = () => {
+  const div = document.createElement("div");
+  div.classList = "div";
+  div.textContent = "Valentine Page will be ready by Next Fall";
+  body.appendChild(div);
+};
